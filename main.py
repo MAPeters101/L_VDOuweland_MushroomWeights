@@ -22,9 +22,10 @@ class Weighted:
 for r in range(rounds):
     print(f"=== ROUND {r}, population {len(chromosomes)} ===")
     weighted = [Weighted(mushroom_weights, chromosome) for chromosome in chromosomes]
-    for w in sorted(weighted):
-        print(w.total_weight)
 
+    # selection
+    best = sorted(weighted)[:2]
+    print(f"Best weight: {best[0].total_weight}")
 
 
 
